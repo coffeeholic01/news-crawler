@@ -95,10 +95,10 @@ def push_to_aws_queue(buffer):
     sqs = boto3.resource('sqs')
     queue = sqs.get_queue_by_name(QueueName='naver-news')
 
-    pdb.set_trance()
+ 
     # temp = {}
     # for x in buffer:
-    #    temp[x['Id']] = x    
+    #     temp[x['Id]] = x
     # buffer = list(temp.values())
 
     # remove duplicates
@@ -113,7 +113,7 @@ def push_to_aws_queue(buffer):
 if __name__=='__main__': 
     base_date = dt.datetime(2022, 8, 1)
 
-    for d in range(30):
+    for d in range(31):
         date = base_date + relativedelta(days=d)
         
         fetch_news_list_for_date(date)
