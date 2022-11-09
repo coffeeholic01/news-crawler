@@ -243,7 +243,7 @@ if __name__=="__main__":
     driver = webdriver.Chrome(executable_path=r'C:\Users\won\chrome\chromedriver.exe') # 웹드라이버가 설치된 경로를 지정해주시면 됩니다.
     driver.get(url)
     # 검색어 입력
-    key_word = '압구정역 맛집'
+    key_word = '한티역 맛집'
 
     # css를 찾을때 까지 30초 대기
     time_wait(30, 'div.input_box > input.input_search')
